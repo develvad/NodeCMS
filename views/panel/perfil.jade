@@ -1,0 +1,38 @@
+extends layout
+
+block content
+
+  include ../header/header
+
+  include ../panel/subheader
+
+  h2 Perfil Usuario
+
+  form(role="form", method="post")
+
+    input(type="hidden", name="_id", value="#{user._id}")
+    .form-group
+      label(for="exampleInputEmail1") Email address
+      input(type="email", class="form-control", id="exampleInputEmail1", name="email", placeholder="Introduce email", value="#{user.email}" disabled)
+
+    .form-group
+      label(for="exampleInputEmail2") Nombre
+      input(type="text", class="form-control", id="exampleInputEmail2", name="name", placeholder="Introduce Nombre", value="#{user.name}")
+
+
+    .form-group
+      label(for="exampleInputEmail3") Apellidos
+      input(type="text", class="form-control", id="exampleInputEmail3", name="surname", placeholder="Introduce apellidos", value="#{user.surname}")
+
+
+    .form-group
+      label(for="exampleInputEmail4") Localidad
+      input(type="text", class="form-control", id="exampleInputEmail4", name="locality", placeholder="Introduce localidad", value="#{user.locality}")
+
+
+    .form-group
+      label(for="exampleInputEmail5") Calle
+      input(type="text", class="form-control", id="exampleInputEmail5", name="street", placeholder="Introduce Calle", value="#{user.street}")
+
+
+    button(type="submit" class="btn btn-primary") Guardar

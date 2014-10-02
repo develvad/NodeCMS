@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+  include header/header
+
+  .jumbotron
+      .container
+        h1 Hello, world!
+        p
+          | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+        p
+          a.btn.btn-primary.btn-lg(role='button') Learn more »
+    .container
+      //
+         Example row of columns
+      .row
+        each noticia in noticias
+          .col-md-4
+            h2 #{noticia.titulo}
+            p #{noticia.descripcion}
+
+      hr
+      footer
+        p © Company 2014
+    //
+       /container
+    //
+       Bootstrap core JavaScript
+          ==================================================
+    //
+       Placed at the end of the document so the pages load faster

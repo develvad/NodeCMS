@@ -1,0 +1,19 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.0.4",
+    "jade": "*",
+    "stylus": "0.32.1",
+    "underscore": "*",
+    "mongoose": "*",
+    "redis": "~0.8.3",
+    "connect-redis": "~1.4.5",
+    "html2jade": "*",
+    "q": "~1.0.1"
+  }
+}

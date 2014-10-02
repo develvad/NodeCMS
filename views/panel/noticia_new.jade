@@ -1,0 +1,31 @@
+extends layout
+
+block content
+
+  include ../header/header
+
+  include ../panel/subheader
+
+  h2 Nueva noticia
+
+  .row
+    .col-md-5
+
+      form(role="form", method="post")
+        // INPUT CLAVE!!!!
+        input(type="hidden", name="user_id", value="#{user._id}")
+
+        .form-group
+          label(for="exampleInputEmail1") Titulo
+          input(type="text", class="form-control", id="exampleInputEmail1", name="titulo", placeholder="Introduce Titulo")
+
+        .form-group
+          label(for="exampleInputEmail2") Descripcion
+          input(type="text", class="form-control", id="exampleInputEmail2", name="descripcion", placeholder="Introduce Descripcion")
+
+
+        .form-group
+          label(for="exampleInputEmail3") Enlace
+          input(type="text", class="form-control", id="exampleInputEmail3", name="enlace", placeholder="Introduce Enlace")
+
+        button(type="submit" class="btn btn-primary") Guardar

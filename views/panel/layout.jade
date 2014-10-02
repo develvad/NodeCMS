@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+  body
+    block content
+
+  script(src='/javascripts/jquery-1.11.1.min.js')
+  script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+  script(src="/javascripts/underscore-min.js")
+  script(src="/javascripts/backbone.js")
+
+
+  // APP Backbone Gestion Panel
+  //script(src="/javascripts/templates/templates.js")
+
+  script#perfilTemplate(type="text/template")
+    .row
+      h2 Perfil VLADI
+
+  script#noticiasNewTemplate(type="text/template")
+    .row
+      h2 New Noticias
+
+
+  script#noticiasTemplate(type="text/template")
+    .row
+      h2 Noticias
+      | <% _.each(noticias, function(noticia) { %>
+      | <h2><%= noticia.titulo %></h2>
+      | <p><%= noticia.descripcion %></p>
+      | <p><%= noticia.enlace %></p>
+      | <% }) %>
+
+
+  script#indexTemplate(type="text/template")
+    .row
+      h2 Index
+
+
+  // TEMPLATES
+  script#subHeaderTemplate(type="text/template")
+    .row
+      ul(class!="nav nav-pills pull-left")
+        li
+          a(href!="#" class!="js-dashboard") Dashboard
+        li
+          a(href!="#" class!="js-perfil") Editar mi perfil
+        li
+          a(href!="#" class!="js-noticias") Noticias
+        li
+          a(href!="#" class!="js-noticias_new") Nueva noticia
+
+
+  script(src="/javascripts/app-backbone.js")
+
